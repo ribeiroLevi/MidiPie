@@ -3,6 +3,7 @@ let ctx;
 
 const StartButton = document.querySelector('button');
 const oscilattors = {};
+
 StartButton.addEventListener('click', () => {
   ctx = new AudioContext();
   console.log(ctx);
@@ -49,13 +50,13 @@ function noteOn(note, vel) {
   const osc = ctx.createOscillator();
   const oscGain = ctx.createGain();
 
-  oscGain.gain.value = 0.33;
+  oscGain.gain.value = 0.5;
 
   const velocityGainAmnt = (1 / 127) * vel;
   const velocityGain = ctx.createGain();
   velocityGain.gain.value = velocityGainAmnt;
 
-  osc.type = 'sine';
+  osc.type = 'triangle';
   osc.frequency.value = midiToFreq(note);
 
   osc.gain = oscGain;
