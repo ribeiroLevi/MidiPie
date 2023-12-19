@@ -48,23 +48,39 @@ function getMIDIMessage(message) {
 function noteOn(note, vel) {
   const osc = ctx.createOscillator();
   const oscGain = ctx.createGain();
-  oscilattors[note.toString()] = osc;
+
   oscGain.gain.value = 0.33;
-  osc.type = 'saw';
+
+  const velocityGainAmnt = (1 / 127) * vel;
+  const velocityGain = ctx.createGain();
+  velocityGain.gain.value = velocityGainAmnt;
+
+  osc.type = 'sine';
   osc.frequency.value = midiToFreq(note);
 
+  osc.gain = oscGain;
   osc.connect(oscGain);
-  oscGain.connect(ctx.destination);
+  oscGain.connect(velocityGain);
+  velocityGain.connect(ctx.destination);
 
   osc.start();
   console.log(osc);
+
+  oscilattors[note.toString()] = osc;
 }
 
 function noteOff(note) {
-  console.log(note);
-
   const osc = oscilattors[note.toString()];
-  osc.stop();
+  const oscGain = osc.gain;
+
+  oscGain.gain.setValueAtTime(oscGain.gain.value, ctx.currentTime);
+  oscGain.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + 0.03);
+
+  setTimeout(() => {
+    osc.stop();
+    osc.disconnect();
+  }, 20);
+
   delete oscilattors[note.toString()];
 }
 
