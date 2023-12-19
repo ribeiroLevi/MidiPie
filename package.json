@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "jazz-midi": "^1.7.9",
+    "web-audio-api": "^0.2.2",
+    "web-midi-api": "^2.2.7",
+    "webmidi": "^3.1.8"
+  }
+}
