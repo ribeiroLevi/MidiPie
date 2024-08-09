@@ -8,8 +8,13 @@ body {
   justify-content: center;
 }
 
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 button {
-  margin-top: 30px;
   background-color: #ec577d;
   border: none;
   width: 100px;
@@ -56,4 +61,81 @@ button:active {
     -ms-transform: scale(0.9);
     transform: scale(0.9), rotate(0);
   }
+}
+
+#settingContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 900;
+}
+
+.progressBar {
+  margin: 20px;
+  color: #ec4972;
+}
+
+#waveType {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  stroke: #ec4972;
+}
+
+#waveType img:nth-of-type(1) {
+  width: 30px;
+}
+#waveType img:nth-of-type(2) {
+  width: 20px;
+}
+#waveType img:nth-of-type(3) {
+  width: 25px;
+}
+
+input[type='range'] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 8px;
+  background: #f4c64a;
+  border-radius: 5px;
+  outline: none;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: #ec4972;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.piano-container {
+  display: flex;
+  position: relative;
+  width: 800px;
+  background: #fff2f6;
+  margin-bottom: 50px;
+}
+.key {
+  width: 40px;
+  height: 200px;
+  margin: 1px;
+  transition: all 0.1s ease;
+}
+.black-key {
+  background: #ec4972;
+  height: 120px;
+  width: 60px;
+}
+.white-key {
+  background: #fff2f6;
+  width: 80px;
+}
+.key:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px #666;
 }

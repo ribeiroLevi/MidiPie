@@ -10,7 +10,63 @@
     <script type="module" src="script.js"></script>
   </head>
   <body>
-    <img id="breathing" src="assets/TORTA.svg" alt="" />
-    <button>CTX</button>
+    <div id="container">
+      <img id="breathing" src="assets/TORTA.svg" alt="" />
+
+      <div class="piano-container"></div>
+      <button>CTX</button>
+      <div id="settingContainer">
+        <div class="progressBar">
+          <p>Gain</p>
+          <input
+            type="range"
+            id="gainProgress"
+            min="0"
+            max="100"
+            value="0"
+            readonly
+          />
+        </div>
+        <div class="progressBar">
+          <p>Frequency</p>
+          <input
+            type="range"
+            id="freqProgress"
+            min="0"
+            max="100"
+            value="0"
+            readonly
+          />
+        </div>
+        <div class="progressBar">
+          <p>Wave</p>
+          <input
+            type="range"
+            id="wave"
+            min="0"
+            max="100"
+            value="0"
+            readonly
+            class="thumb"
+          />
+          <div id="waveType">
+            <img src="./assets/sine-curve-svgrepo-com.svg" alt="" id="test" />
+            <img src="./assets/square-svgrepo-com.svg" alt="" />
+            <img src="./assets/triangle-svgrepo-com.svg" alt="" />
+          </div>
+        </div>
+        <div class="progressBar">
+          <p>Sustain</p>
+          <input
+            type="range"
+            id="delayProgress"
+            min="0"
+            max="100"
+            value="0"
+            readonly
+          />
+        </div>
+      </div>
+    </div>
   </body>
 </html>
