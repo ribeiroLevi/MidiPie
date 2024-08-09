@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Lily+Script+One&display=swap');
+
 html,
 body {
   background-color: #ffe9ad;
@@ -22,7 +24,8 @@ button {
   border-radius: 30px;
   color: #fff2f6;
   font-size: 20px;
-
+  font-family: 'Lily Script One';
+  font-weight: 400;
   transition: all 0.15s;
 }
 button:hover {
@@ -66,14 +69,21 @@ button:active {
 #settingContainer {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   gap: 15px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Lily Script One';
+  font-size: x-large;
   font-weight: 900;
+  width: 800px;
 }
 
 .progressBar {
   margin: 20px;
   color: #ec4972;
+}
+
+.progressBar p {
+  margin-bottom: -10px;
 }
 
 #waveType {
