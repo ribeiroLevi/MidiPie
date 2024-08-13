@@ -1,8 +1,50 @@
 @import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Lily+Script+One&display=swap');
 
+#modal {
+  visibility: visible;
+  position: absolute;
+  z-index: 1;
+  width: 75%;
+  height: 65%;
+  background-color: #ffe9ad;
+  border-radius: 20px;
+  box-shadow: rgba(100, 100, 111, 0.8) 0px 7px 29px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#title {
+  display: flex;
+  justify-content: start;
+  width: 90%;
+  font-size: 1.4rem;
+}
+
+#modal #illustrations {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.onboardingIllustrations {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Lily Script One';
+  font-size: 1.5rem;
+  color: #ec577d;
+}
+
 html,
 body {
+  font-family: 'Lily Script One';
   background-color: #ffe9ad;
+  color: #ec577d;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -19,14 +61,15 @@ body {
 button {
   background-color: #ec577d;
   border: none;
-  width: 100px;
+  width: 150px;
   height: 50px;
-  border-radius: 30px;
+  border-radius: 10px;
   color: #fff2f6;
   font-size: 20px;
   font-family: 'Lily Script One';
   font-weight: 400;
   transition: all 0.15s;
+  margin-bottom: 45px;
 }
 button:hover {
   background-color: #fff2f6;
@@ -35,6 +78,21 @@ button:hover {
 button:active {
   background-color: #f4c64a;
   color: #fff2f6;
+}
+
+#buttons {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman';
+  width: 24%;
+  display: flex;
+  justify-content: end;
+  gap: 15px;
+  width: 90%;
+}
+
+#backButton {
+  background-color: transparent;
+  border: 2px solid #ec4972;
+  color: #ec4972;
 }
 
 #breathing {

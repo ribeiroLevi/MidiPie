@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "input-knob": "^0.0.11",
     "jazz-midi": "^1.7.9",
     "web-audio-api": "^0.2.2",
     "web-midi-api": "^2.2.7",
