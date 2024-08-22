@@ -80,7 +80,7 @@ function handleMIDIControlChange(message) {
       console.log('Knob value B:', data2);
       freqKnob = data2;
       freqProgress.value = data2;
-      pie.style.filter = `saturate(${data2 + 50}%)`;
+      pie.style.filter = `saturate(${data2 * 3}%)`;
       break;
     case 11:
       console.log('Knob value C:', data2);

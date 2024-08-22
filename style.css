@@ -149,6 +149,8 @@ button:active {
   justify-content: space-between;
   margin-top: 10px;
   stroke: #ec4972;
+  filter: invert(52%) sepia(29%) saturate(3427%) hue-rotate(312deg)
+    brightness(95%) contrast(95%);
 }
 
 #waveType img:nth-of-type(1) {
